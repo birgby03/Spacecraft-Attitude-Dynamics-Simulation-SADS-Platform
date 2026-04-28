@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SADS FSW Telemetry</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>SADS FSW Telemetry</h1>
+    <div class="small">Polling /telemetry at 5 Hz</div>
+  </header>
+
+  <div class="grid">
+    <div class="card"><div id="quatPlot"></div></div>
+    <div class="card"><div id="eulerPlot"></div></div>
+    <div class="card"><div id="omegaPlot"></div></div>
+    <div class="card"><div id="rpmPlot"></div></div>
+    <div class="card"><div id="torquePlot"></div></div>
+  </div>
+
+  <script src="/plots.js"></script>
+</body>
+</html>
