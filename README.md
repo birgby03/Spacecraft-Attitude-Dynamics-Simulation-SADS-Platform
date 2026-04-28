@@ -5,6 +5,9 @@ Platform for attitude control spacecraft attitude-control research and validatio
 
 How to generate an executable file after making changes to the software:
 
+First, ensure that there is one and only one file in the SADS_FSW folder named control_task.cpp.
+This GitHub repository includes all three contol task iterations in the flight software folder so please be sure to remove the unwanted versions before building any new code.
+
 Run:
 ```bash
 mkdir -p build
