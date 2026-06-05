@@ -54,7 +54,7 @@ void control_task(SharedState& shared,
         u = Kp*yaw + Kd*yaw_rate;
 
         // Constrain torque command to max limits of 0.05 Nm in either direction
-        if (u > 0.05f || u < -0.02f) u = (u > 0) ? 0.05f : -0.02f;
+        // if (u > 0.05f || u < -0.02f) u = (u > 0) ? 0.05f : -0.02f;
         torque_cmd.fill(u);
 
         // Publish commanded torque for telemetry (even if wheel absent)
