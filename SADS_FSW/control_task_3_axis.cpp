@@ -94,17 +94,12 @@ void control_task(SharedState& shared,
                       shared.est_imu.omega[2] };
         }
 
-        /*
+        
         // Restorative roll/pitch leveling control.
         // Positive roll/pitch angle or rate commands negative body torque.
         body_torque_cmd[0] = -(Kp_x * eul[0] + Kd_x * omega[0]); // roll / body X
         body_torque_cmd[1] = -(Kp_y * eul[1] + Kd_y * omega[1]); // pitch / body Y
         body_torque_cmd[2] = -(Kd_z * omega[2]); // yaw / body Z
-        */
-
-        body_torque_cmd[0] = 0.0f; // roll / body X
-        body_torque_cmd[1] = 0.0f; // pitch / body Y
-        body_torque_cmd[2] = 0.0f; // yaw / body Z
 
         // Allocate body torque to four pyramid wheels.
         for (int i = 0; i < NUM_WHEELS; ++i)
